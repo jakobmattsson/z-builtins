@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '0.11'
+  - '0.10'
+deploy:
+  provider: npm
+  email: jakob.mattsson@gmail.com
+  skip_cleanup: true
+  on:
+    node: '0.10'
+    tags: true
+    repo: jakobmattsson/z-builtins
+  api_key:
+    secure: OK7SQmvZzsckl6jNvUBKoLJOiYCq0W0JwIYUVV25SSddPq1IeoGbzC6YuyoOVdIw/aQO10NbuLzNWe9sldd59+sbisHLtjKHKucHw+s681B5PGAk5vBlPmnx5lYcgnPy6P90syj3ciHJccYKp1qmfTmHxwa6HelFM6RshZR/oT8=
