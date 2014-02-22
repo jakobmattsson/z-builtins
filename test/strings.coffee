@@ -13,3 +13,6 @@ describe 'strings', ->
   it 'endsWith is not defined', ->
     method = @Z("foobar").endsWith
     [method].should.eql [undefined]
+
+  it 'can run slice', ->
+    @Z("foobar").slice(2).should.become "obar"

@@ -1,15 +1,17 @@
+methods = require './methods'
 logging = require './logging'
-arrays = require './arrays'
-strings = require './strings'
-
-imports = [logging, arrays, strings]
-
-for imported in imports
-  for name, func of imported
-    exports[name] = func
-
 
 isArray = Array.isArray || (obj) -> Object.prototype.toString.call(obj) == "[object Array]"
+
+exportMethod = (method) ->
+  exports[method] = (args...) ->
+    @value[method].apply(@value, args)
+
+for name, func of logging
+  exports[name] = func
+
+for method in methods
+  exportMethod(method)
 
 exports.isArray = ->
   isArray(@value)

@@ -1,4 +1,5 @@
-exports.stringMethods = [
+module.exports = [
+  # Strings
   "chatAt"
   "chatCodeAt"
   "concat"
@@ -17,9 +18,8 @@ exports.stringMethods = [
   "toLowerCase"
   "toUpperCase"
   "trim"
-]
 
-exports.arrayMethods = [
+  # Arrays
   "pop"
   "push"
   "reverse"
