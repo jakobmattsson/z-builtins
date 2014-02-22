@@ -11,4 +11,4 @@ deploy:
     tags: true
     repo: jakobmattsson/z-builtins
   api_key:
-    secure: OK7SQmvZzsckl6jNvUBKoLJOiYCq0W0JwIYUVV25SSddPq1IeoGbzC6YuyoOVdIw/aQO10NbuLzNWe9sldd59+sbisHLtjKHKucHw+s681B5PGAk5vBlPmnx5lYcgnPy6P90syj3ciHJccYKp1qmfTmHxwa6HelFM6RshZR/oT8=
+    secure: qX8PZ5NRRi5BRkoeEYKk1PPeFH0mqYMKHjAQyhfRMjpqQ/3UH2bHotU0wc6AkjbmD0ac+oQy+GpSlf6Doujijyq1VdxkCly2LVGeFEle7wlPr7rYHQ7MbbbtWzMXjZ/Bw+BdA3mx1UUap6wljoJ40zop8A5FCh2FJpi0/e9AgwE=
