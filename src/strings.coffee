@@ -1,5 +1,8 @@
 {stringMethods} = require './methods'
 
-for method in stringMethods
+exportMethod = (method) ->
   exports[method] = (args...) ->
     String.prototype[method].apply(@value, args)
+
+for method in stringMethods
+  exportMethod(method)
