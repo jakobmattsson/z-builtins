@@ -20,3 +20,6 @@ exports.length = ->
   if typeof @value != 'string' && !isArray(@value)
     throw new Error('Function "length" can only be called on strings and arrays')
   @value.length
+
+exports.get = (property) ->
+  @value[property]

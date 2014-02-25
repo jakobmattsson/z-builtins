@@ -25,3 +25,11 @@ describe 'other', ->
 
     it 'returns false for strings', ->
       @Z("foobar").isArray().should.become false
+
+  describe 'get', ->
+
+    it 'returns array indexes', ->
+      @Z([1, 2, 3]).get(1).should.become 2
+
+    it 'returns object properties', ->
+      @Z({ a: 1 , b: 2 }).get('a').should.become 1
