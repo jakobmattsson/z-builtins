@@ -29,10 +29,9 @@
   "devDependencies": {
     "z-core": "^0.4.1",
     "jscov": "^0.5.7",
-    "mocha": "^1.12.1",
+    "mocha": "^1.18.0",
     "mocha-term-cov-reporter": "^0.2.0",
     "chai-as-promised": "^4.1.0",
-    "mocha-as-promised": "^2.0.0",
     "coffee-script": "^1.7.1"
   },
   "dependencies": {},
