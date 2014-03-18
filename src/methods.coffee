@@ -33,6 +33,11 @@ exports.plain = [
   "reduce"
   "reduceRight"
   "toLocaleString"
+
+  # Functions
+  'apply'
+  'bind'
+  'call'
 ]
 
 exports.mutators = [
