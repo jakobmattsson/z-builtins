@@ -44,6 +44,10 @@ exports.plain = [
   'toFixed'
   'toLocaleString'
   'toPrecision'
+
+  # RegExps
+  'exec'
+  'test'
 ]
 
 exports.mutators = [
