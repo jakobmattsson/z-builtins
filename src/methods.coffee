@@ -78,4 +78,25 @@ exports.methods = {
   isArray: Array.isArray
   stringify: JSON.stringify
   parseJSON: JSON.parse
+  logarithm: Math.log
 }
+
+exports.maths = [
+  'abs'
+  'acos'
+  'asin'
+  'atan'
+  'atan2'
+  'ceil'
+  'cos'
+  'exp'
+  'floor'
+  # 'log' # implemented as "logarithm" instead
+  'max'
+  'min'
+  'pow'
+  'round'
+  'sin'
+  'sqrt'
+  'tan'
+]

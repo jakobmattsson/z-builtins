@@ -43,6 +43,8 @@ for method in methods.globals
 for name, method of methods.methods
   exportArbitraryMethod(name, method)
 
+for method in methods.maths
+  exportArbitraryMethod(method, Math[method])
 
 
 exports.length = ->
