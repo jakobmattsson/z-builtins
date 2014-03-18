@@ -24,6 +24,9 @@ exportMutatorMethod = (method) ->
     #newValue[method].apply(newValue, args)
     #newValue
 
+exportArbitraryMethod = (name, method) ->
+  exports[name] = (args...) ->
+    method(@value, args...)
 
 for name, func of logging
   exports[name] = func
@@ -37,9 +40,10 @@ for method in methods.mutators
 for method in methods.globals
   exportGlobalMethod(method)
 
+for name, method of methods.methods
+  exportArbitraryMethod(name, method)
 
-exports.isArray = ->
-  isArray(@value)
+
 
 exports.length = ->
   if typeof @value != 'string' && !isArray(@value)

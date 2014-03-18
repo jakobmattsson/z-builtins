@@ -63,3 +63,9 @@ exports.globals = [
   'escape'
   'unescape'
 ]
+
+exports.methods = {
+  isArray: Array.isArray
+  stringify: JSON.stringify
+  parseJSON: JSON.parse
+}
