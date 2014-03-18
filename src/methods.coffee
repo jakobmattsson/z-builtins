@@ -1,7 +1,7 @@
-module.exports = [
+exports.plain = [
   # Strings
-  "chatAt"
-  "chatCodeAt"
+  "charAt"
+  "charCodeAt"
   "concat"
   "indexOf"
   "lastIndexOf"
@@ -20,13 +20,6 @@ module.exports = [
   "trim"
 
   # Arrays
-  "pop"
-  "push"
-  "reverse"
-  "shift"
-  "sort"
-  "splice"
-  "unshift"
   "concat"
   "join"
   "slice"
@@ -39,4 +32,29 @@ module.exports = [
   "map"
   "reduce"
   "reduceRight"
+  "toLocaleString"
+]
+
+exports.mutators = [
+  "reverse"
+  "sort"
+  "pop"
+  "shift"
+  "push"
+  "splice"
+  "unshift"
+]
+
+exports.globals = [
+  'eval'
+  'isFinite'
+  'isNaN'
+  'parseFloat'
+  'parseInt'
+  'decodeURI'
+  'decodeURIComponent'
+  'encodeURI'
+  'encodeURIComponent'
+  'escape'
+  'unescape'
 ]
