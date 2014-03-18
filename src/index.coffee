@@ -10,10 +10,6 @@ exportMethod = (method) ->
   exports[method] = (args...) ->
     @value[method].apply(@value, args)
 
-exportGlobalMethod = (method) ->
-  exports[method] = (args...) ->
-    global[method](@value, args...)
-
 exportMutatorMethod = (method) ->
   exports[method] = (args...) ->
     throw new Error("Must be an array") if !Array.isArray(@value)
@@ -38,7 +34,7 @@ for method in methods.mutators
   exportMutatorMethod(method)
 
 for method in methods.globals
-  exportGlobalMethod(method)
+  exportArbitraryMethod(method, global[method])
 
 for name, method of methods.methods
   exportArbitraryMethod(name, method)
