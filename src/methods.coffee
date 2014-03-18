@@ -38,6 +38,12 @@ exports.plain = [
   'apply'
   'bind'
   'call'
+
+  # Numbers
+  'toExponential'
+  'toFixed'
+  'toLocaleString'
+  'toPrecision'
 ]
 
 exports.mutators = [
