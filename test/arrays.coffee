@@ -19,7 +19,7 @@ describe 'arrays can call', ->
   it 'slice', -> @Z([1, 2, 3, 4, 5]).slice(2).should.become [3, 4, 5]
   it 'toString, but that will always return a string from the promise itself', -> @Z([1,2,3]).toString().should.eql "[object Object]"
   it 'toStr in order to run toString on the promised value', -> @Z([1,2,3]).toStr().should.become "1,2,3"
-  it 'toLocaleString', -> @Z([1, 2, 3]).toLocaleString('de-DE').should.become '1,2,3'
+  it 'toLocaleString', -> @Z([1, 2, 3]).toLocaleString('de-DE').then (val) -> val.should.eql([1,2,3].toLocaleString('de-DE'))
   it 'indexOf', -> @Z([1, 2, 3]).indexOf(2).should.become 1
   it 'lastIndexOf', -> @Z([1, 2, 3]).indexOf(2).should.become 1
   it 'every', -> @Z([1, 2, 3]).every((x) -> x % 2 == 0).should.become false
@@ -95,14 +95,6 @@ describe 'arrays', ->
     'keys'
   ]
 
-  nonStandard = [
-    'toSource'
-  ]
-
   es6.forEach (method) ->
     it "cannot call the ES6-method #{method}", ->
-      [@Z("foobar")[method]].should.eql [undefined]
-
-  nonStandard.forEach (method) ->
-    it "cannot call the non-standard method #{method}", ->
       [@Z("foobar")[method]].should.eql [undefined]

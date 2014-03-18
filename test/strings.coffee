@@ -12,7 +12,7 @@ describe 'strings can call', ->
   it 'concat', -> @Z("foobar").concat(' ', 'baz').should.become 'foobar baz'
   it 'indexOf', -> @Z("foobar").indexOf('bar').should.become 3
   it 'lastIndexOf', -> @Z("foobar").lastIndexOf('o').should.become 2
-  it 'localeCompare', -> @Z("öbo").localeCompare('ystad', 'sv').should.eventually.be.above 0
+  it 'localeCompare', -> @Z("öbo").localeCompare('ystad', 'sv').then (val) -> val.should.eql("öbo".localeCompare("ystad", 'sv'))
   it 'replace', -> @Z("foobar").replace('bar', 'baz').should.become 'foobaz'
   it 'search', -> @Z("foobar").search(/o{2}/).should.become 1
   it 'slice', -> @Z("foobar").slice(2).should.become "obar"
@@ -43,15 +43,6 @@ describe 'strings', ->
     'startsWith'
   ]
 
-  nonStandard = [
-    'quote'
-    'toSource'
-  ]
-
   es6.forEach (method) ->
     it "cannot call the ES6-method #{method}", ->
-      [@Z("foobar")[method]].should.eql [undefined]
-
-  nonStandard.forEach (method) ->
-    it "cannot call the non-standard method #{method}", ->
       [@Z("foobar")[method]].should.eql [undefined]
