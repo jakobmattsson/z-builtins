@@ -214,6 +214,42 @@ call
 
 
 
+### Operators
+
+```
+get - the dot and indexing operators (. and [])
+inc - increment (++)
+dec - decrement (--)
+neg - negate (-)
+typeof
+del - delete
+in
+instanceof
+mult - multiplication (*)
+div - division (/)
+mod - modulo (%)
+add - addition (+)
+sub - subtraction (-)
+bitNot - bitwise not (~)
+bitAnd - bitwise and (&)
+bitOr - bitwise or (|)
+bitLeft - bitwise left shift (<<)
+bitRight - bitwise right shift (>>)
+bitRightFill - bitwise right shift zero fill (>>>)
+gt - greater than (>)
+gte - greather than or equal to (>=)
+lt - less than (<)
+lte - less than or equal to (<=)
+and - logical and (&&)
+or - logical or (||)
+not - logical not (!)
+if - the conditional operator (:?)
+```
+
+Note: The operators `yield`, `void`, `new`, `,` and the assignment operators are not available.
+
+
+
 ### Global functions
 
 ```
