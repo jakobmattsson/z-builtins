@@ -1,5 +1,4 @@
 coreZ = require 'z-core'
-zBuiltins = requireSource 'index'
 
 describe 'arrays can call', ->
 
@@ -43,19 +42,19 @@ describe 'arrays', ->
     @Z.mixin(zBuiltins)
 
 
-  cases = [
+  cases = [{
     name: 'wrappedObject'
     method: (Z, v, f) ->
       a = v
       f(Z(a)).then ->
         a.should.eql(v)
-  ,
+  }, {
     name: 'promise'
     method: (Z, v, f) ->
       a = Z(v)
       f(a).then ->
         a.should.become(v)
-  ]
+  }]
 
   cases.forEach ({ method, name }) ->
 

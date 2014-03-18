@@ -1,5 +1,4 @@
 coreZ = require 'z-core'
-zBuiltins = requireSource 'index'
 
 describe 'logging', ->
 
@@ -21,27 +20,32 @@ describe 'logging', ->
     it 'writes strings', ->
       obj = @Z("foo")
       obj.print().then =>
-        @out.should.eql ["'foo'"]
+        @out.length.should.eql 1
+        JSON.parse(@out[0]).should.eql 'foo'
 
     it 'writes arrays', ->
       obj = @Z([1,2,3])
       obj.print().then =>
-        @out.should.eql ["[ 1, 2, 3 ]"]
+        @out.length.should.eql 1
+        JSON.parse(@out[0]).should.eql [1, 2, 3]
 
     it 'writes arrays of objects', ->
       obj = @Z([{ a: 1 }, { b: 2 }])
       obj.print().then =>
-        @out.should.eql ["[ { a: 1 }, { b: 2 } ]"]
+        @out.length.should.eql 1
+        JSON.parse(@out[0]).should.eql [{ a: 1 }, { b: 2 }]
 
     it 'writes objects', ->
       obj = @Z({ a: 1 })
       obj.print().then =>
-        @out.should.eql ["{ a: 1 }"]
+        @out.length.should.eql 1
+        JSON.parse(@out[0]).should.eql { a: 1 }
 
     it 'writes nested objects', ->
       obj = @Z({ a: { b: { c: 1 } } })
       obj.print().then =>
-        @out.should.eql ["{ a: { b: { c: 1 } } }"]
+        @out.length.should.eql 1
+        JSON.parse(@out[0]).should.eql { a: { b: { c: 1 } } }
 
 
 

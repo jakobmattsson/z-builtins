@@ -1,5 +1,4 @@
 coreZ = require 'z-core'
-zBuiltins = requireSource 'index'
 
 describe 'json can call', ->
 

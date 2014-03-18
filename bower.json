@@ -1,0 +1,33 @@
+{
+  "name": "z-builtins",
+  "version": "0.1.2",
+  "homepage": "https://github.com/jakobmattsson/z-builtins",
+  "authors": [
+    "Jakob Mattsson <jakob.mattsson@gmail.com>"
+  ],
+  "description": "JavaScript builtin mixins for Z",
+  "main": "dist/z-builtins.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "promises",
+    "util",
+    "functional",
+    "client",
+    "server",
+    "browser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.sublime-project",
+    "makefile",
+    "package.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src"
+  ]
+}

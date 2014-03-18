@@ -1,5 +1,4 @@
 coreZ = require 'z-core'
-zBuiltins = requireSource 'index'
 
 describe 'any promise can call', ->
 

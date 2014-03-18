@@ -6,9 +6,19 @@ deploy:
   provider: npm
   email: jakob.mattsson@gmail.com
   skip_cleanup: true
+  api_key:
+    secure: efLnqgQr5vjeIZksBLScghkhJg/cboxz4u2j/TrCq44lEbSqRq7/WZEOWB+yM8JnzdaYOjVU0fR74Ud+N05Fod1lx9d/YCgbDGqU5YnF09Ar3rg68X0w5PYBIIeyOSI7fFtaTlzkjN1s+HHzf9KsjzeexNQKM4aPc6v7lkyq+Xo=
   on:
     node: '0.10'
     tags: true
     repo: jakobmattsson/z-builtins
-  api_key:
-    secure: qX8PZ5NRRi5BRkoeEYKk1PPeFH0mqYMKHjAQyhfRMjpqQ/3UH2bHotU0wc6AkjbmD0ac+oQy+GpSlf6Doujijyq1VdxkCly2LVGeFEle7wlPr7rYHQ7MbbbtWzMXjZ/Bw+BdA3mx1UUap6wljoJ40zop8A5FCh2FJpi0/e9AgwE=
+notifications:
+  hipchat:
+    rooms:
+      secure: FDzMDqVY9iqbBB3FVD7ObVyx8s6IcfdXa24tsbeQLawAZbuGHuUIHb6UDb8Y48N7ECCpOantM8tL9huXd6/lHTDxAmIlmwOKe88aZhM0/u7azUrMEhAYO6y3fP5Smz6361iLqxweKC4TL6qdWcGjLHHfHqqaVPmAKYcuTQ2gfsc=
+env:
+  global:
+  - secure: FnmQo4haH7FY7mEmoZwfh8i40OwHiqyHH+De8NQqsB1T5Pfd2QLvItlfCy6AEXhRxg1FA7nKgUg3TjxO98ENYS8pepgSyJPdyKL7YTncf7c4Vx3LOBYu3unVWJ4jXr7dxCqa7oVgleXmCszG6mpYhr+oeH+f9x4t6kdZ/0Uezqk=
+  - secure: uPyDNu5UjWb9HULIV9YuE20+rHsJwA249fUVJtJAWbceUX2qRROs9PyFzGinUDFsKXWPI//NseatooYanW6JY8WH1it97CDu5JM1Jj/L2ePiT6YBs0P5isT5Mw3TRjJLAI1h+zhkw+D7ry50RLKjUmt73ikXhXfS2rBqNSG7C6I=
+  - secure: gZSnUVltroOXZhx/WNl6NsEZdmpMv8HFraQO7t43kAo+OUfo3KaZXLpcSjubyHB6OXgEbc0hMF/c+IL+zhdgSMPiDxm+bHawum+WA7D14c5A7R3TXJqAZ+dq/NDUFVvOBRnthk0u5olug1YLKFlYOzsILY+PMVmKA6FTHP4Iyxw=
+  - secure: eV3m6RUVom8wNHtZCavEqlYstMuldF5ncR3mBFfF8WxCl2cwg+EGoDzkg6DydR0AgAjbQtm9Hsygc+Ld14egbJEI1rrCoLxBVH6NuxvC8f21IdAcIkF23GC12OV26uSlWqEbwAuS6Gm4GwebTQeHiYvMI5qPHYmM8s7XwU+1OOk=

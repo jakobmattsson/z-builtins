@@ -8,4 +8,4 @@ exports.log = ->
 exports.print = ->
   util = require 'util'
   v = util.inspect(@value, { depth: null })
-  log(v)
+  log(JSON.stringify(@value))
