@@ -33,3 +33,25 @@ describe 'other', ->
 
     it 'returns object properties', ->
       @Z({ a: 1 , b: 2 }).get('a').should.become 1
+
+  describe 'if', ->
+
+    it 'runs the given function if the promise is truthy', ->
+      called = false
+      @Z(1).if(-> called = true).then ->
+        called.should.eql true
+
+    it 'does not run the given function if the promise is falsy', ->
+      called = false
+      @Z(0).if(-> called = true).then ->
+        called.should.eql false
+
+    it 'runs the second function if the promise is falsy', ->
+      called = false
+      @Z(0).if((->), -> called = true).then ->
+        called.should.eql true
+
+    it 'does not run the second function if the promise is truthy', ->
+      called = false
+      @Z(1).if((->), -> called = true).then ->
+        called.should.eql false

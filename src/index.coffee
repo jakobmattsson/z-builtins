@@ -54,6 +54,8 @@ exports.get = (property) ->
 exports.toStr = ->
   @value.toString()
 
-exports.if = (f) ->
+exports.if = (f1, f2) ->
   if @value
-    f()
+    f1()
+  else if f2
+    f2()
