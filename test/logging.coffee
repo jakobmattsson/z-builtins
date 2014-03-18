@@ -16,7 +16,7 @@ describe 'logging', ->
 
 
 
-  describe 'put', ->
+  describe 'print', ->
     
     it 'writes strings', ->
       obj = @Z("foo")
