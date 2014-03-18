@@ -151,6 +151,68 @@ newNumbers.log(); // 2, 3, 5, 7, 11, 9000
 ```
 
 
+### JSON methods
+
+```
+parseJSON (alias for JSON.parse, since parse is ambiguous)
+stringify
+```
+
+
+
+### Math methods
+
+```
+abs
+acos
+asin
+atan
+atan2
+ceil
+cos
+exp
+floor
+logarithm (alias for log, since log is for console.log)
+max
+min
+pow
+round
+sin
+sqrt
+tan
+```
+
+
+
+### Number methods
+
+```
+toExponential
+toFixed
+toLocaleString
+toPrecision
+```
+
+
+
+### Regexp methods
+
+```
+exec
+test
+```
+
+
+
+### Function methods
+
+```
+apply
+bind
+call
+```
+
+
 
 ### Global functions
 
