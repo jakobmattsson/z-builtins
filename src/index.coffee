@@ -53,3 +53,7 @@ exports.get = (property) ->
 
 exports.toStr = ->
   @value.toString()
+
+exports.if = (f) ->
+  if @value
+    f()
