@@ -1,4 +1,6 @@
 DATE = $(shell date +'%Y-%m-%d')
+GIT_STATUS = $(shell git status --porcelain)
+GIT_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 
 CHAI = node_modules/chai/chai.js
 CHAI_AS_PROMISED = node_modules/chai-as-promised/lib/chai-as-promised.js
