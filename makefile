@@ -92,3 +92,19 @@ else
 	@make test-node
 	@make test-browsers
 endif
+
+release:
+ifneq "$(GIT_STATUS)" ""
+	@echo "clean up your changes first"
+else ifneq "$(GIT_BRANCH)" "master"
+	@echo "You can only release from the master branch"
+else
+	@npm test
+	@json -I -e "version='$(VERSION)'" -f bower.json
+	@json -I -e "version='$(VERSION)'" -f package.json
+	@make update-dist
+	@git add bower.json package.json dist/*.js
+	@git commit -m v$(VERSION)
+	@git tag -a v$(VERSION) -m v$(VERSION)
+	@git push --follow-tags
+endif
