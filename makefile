@@ -35,10 +35,10 @@ tmp/dist-header.txt: package.json tmp
 	@echo "// z-builtins v`cat package.json | json version`\n// Jakob Mattsson $(DATE)" > tmp/dist-header.txt
 
 dist/z-builtins.js: lib dist tmp/dist-header.txt
-	@$(cjsify) lib/index.js --no-node -x zBuiltins --alias util:./lib/browserInspect.js | cat tmp/dist-header.txt - > dist/z-builtins.js
+	@$(cjsify) lib/index.js --no-node -x zBuiltins | cat tmp/dist-header.txt - > dist/z-builtins.js
 
 dist/z-builtins-min.js: lib dist tmp/dist-header.txt
-	@$(cjsify) lib/index.js --no-node -x zBuiltins --m --alias util:./lib/browserInspect.js | cat tmp/dist-header.txt - > dist/z-builtins-min.js
+	@$(cjsify) lib/index.js --no-node -x zBuiltins --m | cat tmp/dist-header.txt - > dist/z-builtins-min.js
 
 
 
