@@ -7,5 +7,4 @@ exports.log = ->
 
 exports.print = ->
   util = require 'util'
-  v = util.inspect(@value, { depth: null })
-  log(JSON.stringify(@value))
+  log(JSON.stringify(@value, null, 2))

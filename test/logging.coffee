@@ -47,6 +47,12 @@ describe 'logging', ->
         @out.length.should.eql 1
         JSON.parse(@out[0]).should.eql { a: { b: { c: 1 } } }
 
+    it 'writes nicely formatted objects', ->
+      obj = @Z({ a: { b: { c: 1 } } })
+      obj.print().then =>
+        @out.length.should.eql 1
+        @out[0].should.eql '{\n  "a": {\n    "b": {\n      "c": 1\n    }\n  }\n}'
+
 
 
   describe 'log', ->
