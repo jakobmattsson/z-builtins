@@ -74,14 +74,14 @@
     "node": ">= 0.10 < 0.11"
   },
   "devDependencies": {
-    "z-core": "^0.5.5",
-    "jsontool": "7.0.1",
+    "z-core": "^0.6.2",
+    "json": "9.0.3",
     "commonjs-everywhere": "^0.9.7",
     "bucketful": "^0.15.1",
     "chalcogen": "^0.4.0",
-    "jscov": "^0.5.7",
-    "mocha": "^1.18.0",
-    "mocha-term-cov-reporter": "^0.2.0",
+    "jscov": "^0.6.15",
+    "mocha": "^2.2.5",
+    "mocha-term-cov-reporter": "^0.2.2",
     "chai-as-promised": "^3.3.1",
     "coffee-script": "^1.7.1"
   },
